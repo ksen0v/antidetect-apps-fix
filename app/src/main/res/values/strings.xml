@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppGuard</string>
+
+    <string name="section_apps">Приложения</string>
+    <string name="apps_hint">Эти два приложения никогда не будут работать одновременно: перед запуском одного второе принудительно закрывается.</string>
+    <string name="slot_a">Приложение 1</string>
+    <string name="slot_b">Приложение 2</string>
+    <string name="not_selected">Не выбрано</string>
+    <string name="action_pick">Выбрать</string>
+    <string name="action_launch">Открыть</string>
+    <string name="action_shortcut">Ярлык</string>
+    <string name="same_app_error">Нельзя выбрать одно и то же приложение дважды</string>
+
+    <string name="section_access">Доступ</string>
+    <string name="shizuku_title">Shizuku (рекомендуется, без root)</string>
+    <string name="shizuku_not_installed">Не установлен</string>
+    <string name="shizuku_not_running">Установлен, но не запущен</string>
+    <string name="shizuku_no_permission">Запущен, нет разрешения</string>
+    <string name="shizuku_ready">Работает ✓</string>
+    <string name="shizuku_install">Установить</string>
+    <string name="shizuku_open">Открыть Shizuku</string>
+    <string name="shizuku_grant">Дать разрешение</string>
+
+    <string name="accessibility_title">Служба спецвозможностей</string>
+    <string name="accessibility_on">Включена ✓</string>
+    <string name="accessibility_off">Выключена</string>
+    <string name="accessibility_open">Настройки</string>
+    <string name="accessibility_restricted_hint">Если переключатель недоступен (Android 13+): «Настройки → Приложения → AppGuard → ⋮ → Разрешить ограниченные настройки».</string>
+
+    <string name="intercept_switch">Перехватывать запуск с обычной иконки</string>
+    <string name="intercept_hint">Требует службу спецвозможностей. Если открыть приложение обычной иконкой, пока второе работает, AppGuard свернёт его, закроет оба и откроет нужное заново.</string>
+
+    <string name="mode_shizuku">Режим: Shizuku — точная проверка процессов и am force-stop.</string>
+    <string name="mode_accessibility">Режим: спецвозможности — AppGuard сам нажимает «Остановить» в настройках. Фоновый запуск второго приложения (например, от push) не отслеживается.</string>
+    <string name="mode_none">Нет способа закрывать приложения: запустите Shizuku или включите службу спецвозможностей.</string>
+
+    <string name="action_stop_both">Остановить оба сейчас</string>
+    <string name="stop_both_done">Оба приложения остановлены</string>
+    <string name="stop_both_failed">Не удалось остановить все приложения</string>
+
+    <string name="picker_title">Выберите приложение</string>
+    <string name="picker_search">Поиск</string>
+
+    <string name="shortcut_unsupported">Лаунчер не поддерживает ярлыки</string>
+    <string name="shortcut_label">%1$s ⛨</string>
+
+    <string name="toast_intercepted">«%1$s» работает — закрываю его перед открытием «%2$s»</string>
+    <string name="error_no_launch_intent">Не удалось открыть %1$s</string>
+    <string name="error_stop_failed">Не удалось закрыть «%1$s» — запуск отменён</string>
+
+    <string name="accessibility_label">AppGuard: закрытие приложений</string>
+    <string name="accessibility_description">Следит, какое приложение открыто, и не даёт двум выбранным приложениям работать одновременно. Если Shizuku не запущен, сам нажимает «Остановить» на экране «О приложении».</string>
+</resources>
