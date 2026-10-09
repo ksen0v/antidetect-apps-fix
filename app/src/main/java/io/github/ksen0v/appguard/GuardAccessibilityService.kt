@@ -127,7 +127,7 @@ class GuardAccessibilityService : AccessibilityService() {
             )
         val settingsPackages = buildSet {
             add(SETTINGS_PACKAGE)
-            packageManager.resolveActivity(intent, 0)?.activityInfo?.packageName?.let(::add)
+            packageManager.resolveActivity(intent, 0)?.activityInfo?.packageName?.let { add(it) }
         }
         val request = StopRequest(settingsPackages)
         pending = request
@@ -234,7 +234,7 @@ class GuardAccessibilityService : AccessibilityService() {
         while (queue.isNotEmpty()) {
             val node = queue.removeFirst()
             if (predicate(node)) return node
-            for (i in 0 until node.childCount) node.getChild(i)?.let(queue::add)
+            for (i in 0 until node.childCount) node.getChild(i)?.let { queue.addLast(it) }
         }
         return null
     }
